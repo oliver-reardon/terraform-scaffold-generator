@@ -1,0 +1,9 @@
+# Copy this file to terraform.tfvars and customize for local development
+# project_name = "my-project"
+# environment  = "dev"
+# region       = "us-east-1"
+# 
+# tags = {
+#   Owner      = "your-name"
+#   CostCenter = "engineering"
+# }
