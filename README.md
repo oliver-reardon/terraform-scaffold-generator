@@ -67,7 +67,6 @@ The generated `README.md` will contain:
 ```
 template/
 ├── terraform/
-│   ├── backend.tf      # Backend configuration (Scalr managed)
 │   ├── locals.tf       # Local values and naming conventions
 │   ├── main.tf         # Main Terraform resources
 │   ├── outputs.tf      # Output definitions
