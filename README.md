@@ -15,18 +15,24 @@ make help
 To create a new Terraform project from the template, run:
 
 ```bash
-make new PROJECT=my-project-name
+make new n=my-project-name
+```
+
+You can also specify a custom output directory:
+
+```bash
+make new n=my-project-name o=./projects
 ```
 
 This will:
 
-- Copy the `template/` directory to `my-project-name/`
+- Copy the `template/` directory to the specified location
 - Replace all instances of `my-project` inside `.tfvars` and `.header.md` files with your project name
 - Create a ready-to-use Terraform project
 
 ## Updating Terraform Module Documentation
 
-Each project includes a Makefile to simplify documentation and formatting tasks.
+Each generated project includes a Makefile to simplify documentation and formatting tasks.
 
 ### How it works:
 1. Edit `.header.md` with your project description and usage instructions
@@ -37,11 +43,17 @@ Each project includes a Makefile to simplify documentation and formatting tasks.
 ```bash
 cd my-project-name
 
-# Format your Terraform files
+# Format your Terraform files (default: terraform/ folder)
 make fmt
 
-# Generate documentation
+# Format files in a specific path
+make fmt p=modules/networking
+
+# Generate documentation (default: terraform/ folder)
 make docs
+
+# Generate docs for a specific path
+make docs p=modules/networking
 ```
 
 The generated `README.md` will contain:
