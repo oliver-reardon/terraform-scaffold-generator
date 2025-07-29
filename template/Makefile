@@ -1,7 +1,7 @@
 .PHONY: help docs fmt
 
-PATH ?= terraform
-p ?= $(PATH)
+TFPATH ?= terraform
+p ?= $(TFPATH)
 
 help: ## Show this help
 	@echo "Terraform Documentation Generator"
